@@ -1,0 +1,360 @@
+@font-face {
+    font-family: Steclo;
+    src: url("font/Pepper\ Type\ -\ Steclo-ExtraLight.otf") format("opentype");
+}
+
+@font-face {
+    font-family: comiccat;
+    src: url("font/Comic_CAT.otf") format("opentype");
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.one {
+    color: red;
+}
+.two {
+    color: rgb(255, 208, 0);
+}
+
+.free {
+    color: rgb(145, 255, 0);
+}
+
+.foo {
+    color: rgb(0, 255, 123);
+}
+
+.five {
+    color: rgb(0, 225, 255);
+}
+
+.six {
+    color: rgb(0, 85, 255);
+}
+
+.seven {
+    color: rgb(221, 0, 255);
+}
+
+.ait {
+    color: rgb(255, 0, 153);
+}
+
+.nine {
+    color: rgb(187, 160, 89);
+    cursor: default;
+}
+
+main p {
+    text-align: center;
+    font-size: 115%;
+    margin-top: 5%;
+    margin-left: 15%;
+    margin-right: 15%;
+    color: rgb(90, 90, 90);
+    font-family: comiccat;
+}
+
+h2 {
+    font-family: Steclo;
+    font-size: 270%;
+    text-align: center;
+    color: rgb(11, 35, 57);
+    padding-top: 5%;
+}
+
+
+
+.hh2 {
+    margin-top: 15%;
+}
+
+.hhh2 {
+    font-size: 180%;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    font-size: 120%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(73, 73, 73);
+    padding-top: 7%;
+    padding-bottom: 2%;
+    background-color: aliceblue;
+}
+
+@media (min-width:1081px)  {
+
+body {
+    background-image: url(images/aiyl.png);
+    background-size: 100% auto;
+    background-attachment: inherit;
+    background-repeat: no-repeat;
+}
+
+header img {
+    display: absolute;
+    margin-top: 2%;
+    margin-left: 3%;
+}
+
+nav .menu__box {
+    display: none;
+}
+
+nav .hamburger-menu {
+    display: none;
+}
+
+nav {
+    width: 30%;
+    text-align: justify;
+    margin-right: 4%;
+    margin-top: 2%;
+    float: right;
+}
+
+nav ul {
+    justify-content: space-between;
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(139, 113, 46);
+    font-size: 200%;
+    font-family: Steclo;
+
+}
+
+main {
+    background-color: aliceblue;
+    width: 100%;
+    height: auto;
+    margin-top: 61%;
+}
+
+section {
+    border: 0px solid black;
+    width: 100%;
+    display: flex;
+}
+section img {
+    margin-top: 1%;
+    margin-bottom: 4%;
+    margin-left: 0.15%;
+    margin-right: 0.15%;
+}
+
+}
+
+
+@media screen and (max-width: 1080px) and (min-width: 521px){
+    body {
+        background-image: url(images/aiyl.png);
+        background-size: 100% auto;
+        background-attachment: inherit;
+        background-repeat: no-repeat;
+    }
+    
+    header img {
+        display: none;
+    }
+    
+    nav .menu__box {
+        display: none;
+    }
+    
+    nav .hamburger-menu {
+        display: none;
+    }
+
+    nav {
+        width: 100%;
+
+    }
+
+    nav ul {
+        justify-content: space-evenly;
+
+    }
+
+    nav ul li {
+        display: inline;
+        margin-left: 84%;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: rgb(139, 113, 46);
+        font-family: Steclo;
+        font-size: 150%;
+    }
+    
+    main {
+        background-color: aliceblue;
+        width: 100%;
+        height: auto;
+        margin-top: 51%;
+    }
+    
+    section {
+        width: 100%;
+
+    }
+    section img {
+        width: 100%;
+    }
+    
+    
+}
+
+@media screen and (max-width:520px) {
+    body {
+        background-image: url(images/tel/mini\ me.png);
+        background-size: 100% auto;
+        background-attachment: inherit;
+        background-repeat: no-repeat;
+    }
+
+    header img {
+        display: none
+    }
+
+    nav {
+        width: 100%;
+        margin: 0;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+
+
+    #menu__toggle {
+        opacity: 0;
+      }
+    
+      .menu__btn {
+        display: flex;
+        align-items: center;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        width: 26px;
+        height: 26px;
+        cursor: pointer;
+        z-index: 1;
+      }
+    
+      .menu__btn > span,
+      .menu__btn > span::before,
+      .menu__btn > span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #be7900;
+      }
+      .menu__btn > span::before {
+        content: '';
+        top: -8px;
+      }
+      .menu__btn > span::after {
+        content: '';
+        top: 8px;
+      }
+    
+    
+    /* контейнер меню */
+    .menu__box {
+        display: block;
+        position: fixed;
+        visibility: hidden;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 35%;
+        margin: 0;
+        padding-top: 10%;
+        list-style: none;
+        text-align: center;
+        background-color: #fff200;
+        box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+      }
+      /* элементы меню */
+      .menu__item {
+        display: block;
+        padding: 12px 24px;
+        color: #333;
+        font-family: steclo;
+        font-size: 30px;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      .menu__item:hover {
+        background-color: #CFD8DC;
+      }
+    
+      #menu__toggle:checked ~ .menu__btn > span {
+        transform: rotate(45deg);
+      }
+      #menu__toggle:checked ~ .menu__btn > span::before {
+        top: 0;
+        transform: rotate(0);
+      }
+      #menu__toggle:checked ~ .menu__btn > span::after {
+        top: 0;
+        transform: rotate(90deg);
+      }
+      #menu__toggle:checked ~ .menu__box {
+        visibility: visible;
+        left: 0;
+      }
+        
+      .menu__btn > span,
+      .menu__btn > span::before,
+      .menu__btn > span::after {
+        transition-duration: .25s;
+      }
+      .menu__box {
+        transition-duration: .25s;
+      }
+      .menu__item {
+        transition-duration: .25s;
+      }
+    
+      .menu__box1 {
+        display: none;
+      }
+
+
+    
+
+    main {
+        background-color: aliceblue;
+        width: 100%;
+        height: auto;
+        margin-top: 111%;
+    }
+
+    section {
+        width: 100%;
+    }
+    section img {
+        width: 98%;
+        margin: 1%;
+
+    }
+}
