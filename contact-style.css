@@ -19,12 +19,6 @@
     cursor: default;
 }
 
-.bor {
-    border: 2px solid rgb(255, 183, 1);
-    padding: 0.5%;
-    border-radius: 30%;
-}
-
 body {
     background-color: rgb(98, 255, 0);
     background-size: 100% auto;
