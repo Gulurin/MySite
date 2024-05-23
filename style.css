@@ -1,13 +1,3 @@
-@font-face {
-  font-family: Steclo;
-  src: url("font/Pepper\ Type\ -\ Steclo-ExtraLight.otf") format("opentype");
-}
-
-@font-face {
-  font-family: comiccat;
-  src: url("font/Comic_CAT.otf") format("opentype");
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -16,66 +6,37 @@
   border-color: red; */
 }
 
-.one {
-  color: red;
-}
-.two {
-  color: rgb(255, 208, 0);
+body.light-theme {
+  --color-text: rgb(34, 34, 34);
+  --color-background: rgb(204, 204, 204);
 }
 
-.free {
-  color: rgb(145, 255, 0);
+body.dark-theme {
+  --color-text: rgb(250, 250, 250);
+  --color-background: rgb(34, 34, 34);
 }
 
-.foo {
-  color: rgb(0, 255, 123);
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
 }
 
-.five {
-  color: rgb(0, 225, 255);
+.buttons {
+  padding-top: 1%;
+  padding-left: 60%;
+  display: flex;
+  gap: 1%;
 }
 
-.six {
-  color: rgb(0, 85, 255);
+.button {
+  border: 0;
+  border-radius: 4px;
+  font-size: 100%;
+  padding: 1% 2%;
 }
 
-.seven {
-  color: rgb(221, 0, 255);
-}
-
-.ait {
-  color: rgb(255, 0, 153);
-}
-
-.nine {
-  color: rgb(187, 160, 89);
-  cursor: default;
-}
-
-main p {
-  text-align: center;
-  font-size: 115%;
-  margin-top: 5%;
-  margin-left: 15%;
-  margin-right: 15%;
-  color: rgb(90, 90, 90);
-  font-family: comiccat;
-}
-
-h2 {
-  font-family: Steclo;
-  font-size: 270%;
-  text-align: center;
-  color: rgb(11, 35, 57);
-  padding-top: 5%;
-}
-
-.hh2 {
-  margin-top: 15%;
-}
-
-.hhh2 {
-  font-size: 180%;
+.button--selected {
+  background-color: rgba(78, 78, 78, 0.363);
 }
 
 footer {
@@ -83,26 +44,25 @@ footer {
   text-align: center;
   font-size: 120%;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  color: rgb(73, 73, 73);
+  color: rgb(207, 207, 207);
   padding-top: 7%;
   padding-bottom: 2%;
-  background-color: aliceblue;
+  background-color: rgb(54, 54, 54);
+}
+
+p {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+h2 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 250%;
+  text-align: center;
 }
 
 @media (min-width: 1081px) {
-  body {
-    background-image: url(images/aiyl.png);
-    background-size: 100% auto;
-    background-attachment: inherit;
-    background-repeat: no-repeat;
-  }
-
-  header img {
-    display: absolute;
-    margin-top: 2%;
-    margin-left: 3%;
-  }
-
   nav .menu__box {
     display: none;
   }
@@ -135,38 +95,108 @@ footer {
     font-family: Steclo;
   }
 
-  main {
-    background-color: aliceblue;
-    width: 100%;
-    height: auto;
-    margin-top: 61%;
-  }
-
-  section {
-    border: 0px solid black;
-    width: 100%;
-    display: flex;
-  }
-  section img {
-    margin-top: 1%;
-    margin-bottom: 4%;
-    margin-left: 0.15%;
-    margin-right: 0.15%;
-  }
-}
-
-@media screen and (max-width: 1080px) and (min-width: 521px) {
-  body {
+  /* index-стиль */
+  body.index {
     background-image: url(images/aiyl.png);
     background-size: 100% auto;
     background-attachment: inherit;
     background-repeat: no-repeat;
   }
 
-  header img {
-    display: none;
+  main.index {
+    width: 100%;
+    height: auto;
+    margin-top: 61%;
   }
 
+  main.index p {
+    text-align: center;
+    font-size: 100%;
+    margin-left: 15%;
+    margin-right: 15%;
+    font-family: comiccat;
+  }
+
+  section.index {
+    border: 0px solid black;
+    width: 100%;
+    display: flex;
+  }
+  section img.index {
+    margin-top: 1%;
+    margin-bottom: 4%;
+    margin-left: 0.15%;
+    margin-right: 0.15%;
+  }
+
+  /* about-стиль */
+
+  section.other {
+    margin-top: 10%;
+  }
+
+  section.other p {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 170%;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  section.other img {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    width: 35%;
+    height: auto;
+  }
+
+  /* contact-стиль */
+
+  main.contact {
+    width: 100%;
+  }
+
+  main.contact img {
+    min-height: 30%;
+    min-width: 640px;
+    width: 53.4%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 25%;
+    z-index: -1;
+  }
+
+  h2.contact {
+    margin-top: 20%;
+    margin-left: 6%;
+    margin-right: 1%;
+    transform: rotate(-4deg);
+    font-family: comiccat;
+    font-size: 100%;
+  }
+
+  /* social-стиль */
+
+  main.social {
+    width: 100%;
+  }
+
+  main.social ul {
+    display: inline-flex;
+    justify-content: space-around;
+    margin-left: 24%;
+    margin-right: 10%;
+    margin-top: 15%;
+  }
+
+  main.social ul li {
+    list-style: none;
+  }
+}
+
+@media screen and (max-width: 1080px) and (min-width: 521px) {
   nav .menu__box {
     display: none;
   }
@@ -195,33 +225,85 @@ footer {
     font-size: 150%;
   }
 
-  main {
-    background-color: aliceblue;
-    width: 100%;
-    height: auto;
-    margin-top: 51%;
-  }
-
-  section {
-    width: 100%;
-  }
-  section img {
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 520px) {
-  body {
-    background-image: url(images/aiyl_mobile.png);
+  /* index-стиль */
+  body.index {
+    background-image: url(images/aiyl.png);
     background-size: 100% auto;
     background-attachment: inherit;
     background-repeat: no-repeat;
   }
 
-  header img {
-    display: none;
+  main.index {
+    width: 100%;
+    height: auto;
+    margin-top: 51%;
+    text-align: center;
   }
 
+  section.index img {
+    width: 100%;
+  }
+
+  section.index {
+    width: 100%;
+  }
+
+  /* about-стиль */
+
+  section.other {
+    margin-top: 10%;
+  }
+
+  section.other p {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 170%;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  section.other img {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    width: 35%;
+    height: auto;
+  }
+
+  /* contact-стиль */
+
+  main.contact img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  h2.contact {
+    font-family: comiccat;
+    font-size: 100%;
+    padding-bottom: 5%;
+  }
+
+  /* social-стиль */
+
+  main.social {
+    width: 100%;
+  }
+
+  main.social ul {
+    display: inline-flex;
+    justify-content: space-around;
+    margin-left: 24%;
+    margin-right: 10%;
+    margin-top: 15%;
+  }
+
+  main.social ul li {
+    list-style: none;
+  }
+}
+
+@media screen and (max-width: 520px) {
   nav {
     width: 100%;
     margin: 0;
@@ -328,18 +410,82 @@ footer {
     display: none;
   }
 
-  main {
-    background-color: aliceblue;
+  /* index-стиль */
+  body.index {
+    background-image: url(images/aiyl_mobile.png);
+    background-size: 100% auto;
+    background-attachment: inherit;
+    background-repeat: no-repeat;
+  }
+
+  main.index {
     width: 100%;
     height: auto;
     margin-top: 111%;
+    text-align: center;
   }
 
-  section {
+  section.index {
     width: 100%;
   }
-  section img {
+  section.index img {
     width: 98%;
     margin: 1%;
+  }
+
+  /* about-стиль */
+
+  section.other {
+    margin-top: 10%;
+  }
+
+  section.other p {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 170%;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  section.other img {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    width: 35%;
+    height: auto;
+  }
+
+  /* contact-стиль */
+
+  main.contact img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  h2.contact {
+    font-family: comiccat;
+    font-size: 100%;
+    padding-bottom: 5%;
+  }
+
+  /* social-стиль */
+
+  main.social {
+    width: 100%;
+    margin-top: 10%;
+  }
+
+  main.social ul {
+    margin-left: 19%;
+  }
+
+  main.social ul li {
+    margin: 20%;
+    list-style: none;
+  }
+
+  main.social ul li img {
+    width: 70%;
   }
 }
